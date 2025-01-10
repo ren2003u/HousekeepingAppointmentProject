@@ -19,4 +19,28 @@ public class ThingWish implements Serializable {
     @TableField
     public String userId;
 
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getThingId() {
+        return thingId;
+    }
+
+    public void setThingId(String thingId) {
+        this.thingId = thingId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 }

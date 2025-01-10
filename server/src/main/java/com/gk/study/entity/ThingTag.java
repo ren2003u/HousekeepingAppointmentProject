@@ -18,4 +18,27 @@ public class ThingTag implements Serializable {
     @TableField
     public Long tagId;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getThingId() {
+        return thingId;
+    }
+
+    public void setThingId(Long thingId) {
+        this.thingId = thingId;
+    }
+
+    public Long getTagId() {
+        return tagId;
+    }
+
+    public void setTagId(Long tagId) {
+        this.tagId = tagId;
+    }
 }
