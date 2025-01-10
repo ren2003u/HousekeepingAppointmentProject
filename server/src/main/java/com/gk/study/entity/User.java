@@ -54,6 +54,28 @@ public class User implements Serializable {
     @TableField
     public String pushSwitch;
 
+    // 新增的
+    @TableField
+    private String wechatOpenid;
+    @TableField
+    private String wechatUnionid;
+
+    public String getWechatOpenid() {
+        return wechatOpenid;
+    }
+
+    public void setWechatOpenid(String wechatOpenid) {
+        this.wechatOpenid = wechatOpenid;
+    }
+
+    public String getWechatUnionid() {
+        return wechatUnionid;
+    }
+
+    public void setWechatUnionid(String wechatUnionid) {
+        this.wechatUnionid = wechatUnionid;
+    }
+
     public String getId() {
         return id;
     }

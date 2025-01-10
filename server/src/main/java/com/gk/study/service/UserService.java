@@ -18,4 +18,6 @@ public interface UserService {
     User getUserByUserName(String username);
 
     User getUserDetail(String userId);
+
+    User getUserByWeChatOpenId(String openId);
 }

@@ -81,4 +81,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         queryWrapper.eq("id", userId);
         return userMapper.selectOne(queryWrapper);
     }
+
+    @Override
+    public User getUserByWeChatOpenId(String openId) {
+        QueryWrapper<User> queryWrapper = new QueryWrapper();
+        queryWrapper.eq("wechat_openid",openId);
+        return userMapper.selectOne(queryWrapper);
+    }
 }

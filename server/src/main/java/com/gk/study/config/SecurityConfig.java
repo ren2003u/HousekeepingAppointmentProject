@@ -47,7 +47,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // 2.对特定接口放行，如注册、登录、静态资源等
         http.authorizeRequests()
                 .antMatchers("/api/auth/**").permitAll()  // 登录/注册接口无需鉴权
-                .antMatchers("/api/user/userRegister").permitAll()
+                .antMatchers("/api/user/**").permitAll()
+                .antMatchers("/user/**").permitAll()
+                .antMatchers("/auth/**").permitAll()
                 .antMatchers("/api/thing/list").permitAll()
                 // ... 其他放行接口
                 .anyRequest().authenticated();
