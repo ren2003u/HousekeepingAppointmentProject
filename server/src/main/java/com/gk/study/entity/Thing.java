@@ -8,6 +8,7 @@ import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Data
@@ -22,7 +23,7 @@ public class Thing implements Serializable {
     @TableField
     public String description;
     @TableField
-    public String price;
+    public BigDecimal price;
     @TableField
     public String status;
     @TableField
@@ -40,13 +41,18 @@ public class Thing implements Serializable {
     @TableField
     public String pv;
     @TableField
-    public String recommendCount;
+    public int recommendCount;
     @TableField
-    public String wishCount;
+    public int wishCount;
     @TableField
-    public String collectCount;
+    public int collectCount;
     @TableField
     public Long classificationId;
+    @TableField
+    public Double Latitude;
+
+    @TableField
+    public Double Longitude;
 
     @TableField(exist = false)
     public List<Long> tags; // 标签
@@ -97,28 +103,28 @@ public class Thing implements Serializable {
         this.classificationId = classificationId;
     }
 
-    public String getCollectCount() {
-        return collectCount;
-    }
-
-    public void setCollectCount(String collectCount) {
-        this.collectCount = collectCount;
-    }
-
-    public String getWishCount() {
-        return wishCount;
-    }
-
-    public void setWishCount(String wishCount) {
-        this.wishCount = wishCount;
-    }
-
-    public String getRecommendCount() {
+    public int getRecommendCount() {
         return recommendCount;
     }
 
-    public void setRecommendCount(String recommendCount) {
+    public void setRecommendCount(int recommendCount) {
         this.recommendCount = recommendCount;
+    }
+
+    public int getWishCount() {
+        return wishCount;
+    }
+
+    public void setWishCount(int wishCount) {
+        this.wishCount = wishCount;
+    }
+
+    public int getCollectCount() {
+        return collectCount;
+    }
+
+    public void setCollectCount(int collectCount) {
+        this.collectCount = collectCount;
     }
 
     public String getPv() {
@@ -153,11 +159,11 @@ public class Thing implements Serializable {
         this.description = description;
     }
 
-    public String getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -215,5 +221,21 @@ public class Thing implements Serializable {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public Double getLatitude() {
+        return Latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        Latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return Longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        Longitude = longitude;
     }
 }
