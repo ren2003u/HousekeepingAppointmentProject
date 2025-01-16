@@ -20,7 +20,7 @@ public class User implements Serializable {
     public static final int AdminUser = 3;
 
     @TableId(value = "id",type = IdType.AUTO)
-    public String id;
+    public Long id;
     @TableField
     public String username;
     @TableField
@@ -36,7 +36,7 @@ public class User implements Serializable {
     @TableField
     public String description;
     @TableField
-    public String role;
+    public int role;
     @TableField
     public String status;
     @TableField
@@ -76,11 +76,11 @@ public class User implements Serializable {
         this.wechatUnionid = wechatUnionid;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -140,11 +140,11 @@ public class User implements Serializable {
         this.description = description;
     }
 
-    public String getRole() {
+    public int getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(int role) {
         this.role = role;
     }
 

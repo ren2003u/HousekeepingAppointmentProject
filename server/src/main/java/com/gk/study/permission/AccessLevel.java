@@ -7,6 +7,8 @@ public enum AccessLevel {
     LOGIN(1, "all"), // 登录用户
     DEMO(2, "demo"), // 演示账号
     ADMIN(3, "admin"), // 管理员
+    PUBLIC(4,"public"),
+    SERVICE_PROVIDER(5,"service_provider"), // 服务提供者
     SUPER(4, "super"); // 超级管理员
 
     int code;

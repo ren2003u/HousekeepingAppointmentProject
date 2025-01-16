@@ -54,6 +54,8 @@ public class Thing implements Serializable {
     @TableField
     public Double Longitude;
 
+
+
     @TableField(exist = false)
     public List<Long> tags; // 标签
 
@@ -61,7 +63,7 @@ public class Thing implements Serializable {
     public MultipartFile imageFile;
 
     @TableField
-    public String userId;
+    public Long userId;// 发布服务的用户ID
 
     public Long getId() {
         return id;
@@ -71,11 +73,11 @@ public class Thing implements Serializable {
         this.id = id;
     }
 
-    public String getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 

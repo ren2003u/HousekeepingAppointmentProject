@@ -106,7 +106,7 @@ public class UserController {
                 user.avatar = avatar;
             }
             // 设置角色
-            user.setRole(String.valueOf(User.NormalUser));
+            user.setRole(User.NormalUser);
             // 设置状态
             user.setStatus("0");
             user.setCreateTime(String.valueOf(System.currentTimeMillis()));
@@ -177,12 +177,12 @@ public class UserController {
     @RequestMapping(value = "/updateUserInfo", method = RequestMethod.POST)
     @Transactional
     public APIResponse updateUserInfo(User user) throws IOException {
-        User tmpUser =  userService.getUserDetail(user.getId());
-        if(tmpUser.getRole().equals(String.valueOf(User.NormalUser))){
+        User tmpUser =  userService.getUserDetail(String.valueOf(user.getId()));
+        if(tmpUser.getRole() == User.NormalUser){
             // username和password不能改，故置空
             user.setUsername(null);
             user.setPassword(null);
-            user.setRole(String.valueOf(User.NormalUser));
+            user.setRole(User.NormalUser);
             String avatar = saveAvatar(user);
             if(!StringUtils.isEmpty(avatar)) {
                 user.avatar = avatar;
@@ -199,7 +199,7 @@ public class UserController {
     @Transactional
     public APIResponse updatePwd(String userId, String password, String newPassword) throws IOException {
         User user =  userService.getUserDetail(userId);
-        if(user.getRole().equals(String.valueOf(User.NormalUser))) {
+        if(user.getRole() == User.NormalUser) {
             String md5Pwd = DigestUtils.md5DigestAsHex((password + salt).getBytes());
             if(user.getPassword().equals(md5Pwd)){
                 user.setPassword(DigestUtils.md5DigestAsHex((newPassword + salt).getBytes()));
@@ -261,7 +261,7 @@ public class UserController {
         User newUser = new User();
         newUser.setUsername(request.getUsername());
         newUser.setPassword(bcryptPwd);
-        newUser.setRole("0"); // 假设0=普通用户; 也可存 request 传来的值
+        newUser.setRole(0); // 假设0=普通用户; 也可存 request 传来的值
         newUser.setStatus("0");
         newUser.setCreateTime(String.valueOf(System.currentTimeMillis()));
 
@@ -319,7 +319,7 @@ public class UserController {
         newUser.setWechatUnionid(unionid);
 
         // 3.4 其他常规字段
-        newUser.setRole("0"); // 普通用户
+        newUser.setRole(0); // 普通用户
         newUser.setStatus("0");
         newUser.setCreateTime(String.valueOf(System.currentTimeMillis()));
         // 例如取微信昵称/头像，如果你能从微信接口拿到
