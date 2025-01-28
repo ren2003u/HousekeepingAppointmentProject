@@ -264,7 +264,6 @@ public class UserController {
         newUser.setRole(0); // 假设0=普通用户; 也可存 request 传来的值
         newUser.setStatus("0");
         newUser.setCreateTime(String.valueOf(System.currentTimeMillis()));
-
         if (!StringUtils.isEmpty(request.getPhone())) {
             newUser.setMobile(request.getPhone());
         }
