@@ -9,6 +9,8 @@ import com.gk.study.mapper.ThingMapper;
 import com.gk.study.mapper.ThingTagMapper;
 import com.gk.study.service.ThingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -170,6 +172,135 @@ public class ThingServiceImpl extends ServiceImpl<ThingMapper, Thing> implements
         return things;
     }
 
+//    @Override
+//    public Page<Thing> searchServices(
+//            String keyword,
+//            String sort,
+//            Long categoryId,
+//            Double userLat,
+//            Double userLng,
+//            Double distanceKm,
+//            BigDecimal minPrice,
+//            BigDecimal maxPrice,
+//            Pageable pageable) {
+//
+//        // 转换Spring Pageable为MyBatis-Plus的Page对象
+//        Page<Thing> mpPage = new Page<>(
+//                pageable.getPageNumber() + 1, // MyBatis-Plus页码从1开始
+//                pageable.getPageSize()
+//        );
+//
+//        // 构建查询条件
+//        QueryWrapper<Thing> queryWrapper = buildBaseQueryWrapper(
+//                keyword,
+//                sort,
+//                categoryId,
+//                minPrice,
+//                maxPrice
+//        );
+//
+//        // 添加空间距离筛选（数据库层面）
+//        addSpatialFilter(queryWrapper, userLat, userLng, distanceKm);
+//
+//        // 执行分页查询
+//        Page<Thing> resultPage = this.baseMapper.selectPage(mpPage, queryWrapper);
+//
+//        // 后处理（内存层面）
+//        processPostQuery(resultPage.getRecords(), userLat, userLng, sort);
+//
+//        return resultPage;
+//    }
+//
+//    private QueryWrapper<Thing> buildBaseQueryWrapper(
+//            String keyword,
+//            String sort,
+//            Long categoryId,
+//            BigDecimal minPrice,
+//            BigDecimal maxPrice) {
+//
+//        QueryWrapper<Thing> queryWrapper = new QueryWrapper<>();
+//
+//        // 关键词搜索
+//        if (StringUtils.isNotBlank(keyword)) {
+//            queryWrapper.and(wrapper -> wrapper
+//                    .like("title", keyword)
+//                    .or()
+//                    .like("description", keyword)
+//            );
+//        }
+//
+//        // 分类筛选
+//        if (categoryId != null && categoryId != -1L) {
+//            queryWrapper.eq("classification_id", categoryId);
+//        }
+//
+//        // 价格区间
+//        if (minPrice != null) {
+//            queryWrapper.ge("price", minPrice);
+//        }
+//        if (maxPrice != null) {
+//            queryWrapper.le("price", maxPrice);
+//        }
+//
+//        // 排序逻辑
+//        applySorting(queryWrapper, sort);
+//
+//        return queryWrapper;
+//    }
+//
+//    private void applySorting(QueryWrapper<Thing> queryWrapper, String sort) {
+//        if (StringUtils.isBlank(sort)) {
+//            queryWrapper.orderByDesc("create_time");
+//            return;
+//        }
+//
+//        switch (sort.toLowerCase()) {
+//            case "recent":
+//                queryWrapper.orderByDesc("create_time");
+//                break;
+//            case "hot":
+//                queryWrapper.orderByDesc("pv");
+//                break;
+//            case "recommend":
+//                queryWrapper.orderByDesc("recommend_score");
+//                break;
+//            default:
+//                queryWrapper.orderByDesc("create_time");
+//        }
+//    }
+//
+//    private void addSpatialFilter(QueryWrapper<Thing> queryWrapper,
+//                                  Double userLat, Double userLng,
+//                                  Double distanceKm) {
+//        if (userLat != null && userLng != null && distanceKm != null) {
+//            String distanceSql = String.format(
+//                    "ST_Distance_Sphere(POINT(%f, %f), POINCTRY(longitude, latitude)) <= %f * 1000",
+//                    userLng, userLat, distanceKm
+//            );
+//            queryWrapper.apply(distanceSql);
+//        }
+//    }
+//
+//    private void processPostQuery(List<Thing> things,
+//                                  Double userLat, Double userLng,
+//                                  String sort) {
+//        // 附加标签信息
+//        things.forEach(thing -> {
+//            List<Long> tags = thingTagMapper.selectList(
+//                            new QueryWrapper<ThingTag>().eq("thing_id", thing.getId())
+//                    ).stream()
+//                    .map(ThingTag::getTagId)
+//                    .collect(Collectors.toList());
+//            thing.setTags(tags);
+//        });
+//
+//        // 内存层面的推荐排序（需全量数据时使用）
+//        if ("recommend".equalsIgnoreCase(sort)) {
+//            things.sort((t1, t2) ->
+//                    Double.compare(calculateRecommendScore(t2), calculateRecommendScore(t1))
+//            );
+//        }
+//    }
     /**
      * 示例推荐算法，实际应根据具体需求设计
      */
@@ -178,6 +309,19 @@ public class ThingServiceImpl extends ServiceImpl<ThingMapper, Thing> implements
         return thing.getCollectCount() * 1.0 + thing.getWishCount() * 0.5;
     }
 
+    /**
+     * 计算两点之间的距离（公里）
+     */
+    private double calculateDistance(double lat1, double lng1, double lat2, double lng2) {
+        final int EARTH_RADIUS = 6371; // 地球半径，单位公里
+        double latDistance = Math.toRadians(lat2 - lat1);
+        double lngDistance = Math.toRadians(lng2 - lng1);
+        double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2)
+                + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
+                * Math.sin(lngDistance / 2) * Math.sin(lngDistance / 2);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return EARTH_RADIUS * c;
+    }
 
     @Override
     public void createThing(Thing thing) {
@@ -256,17 +400,5 @@ public class ThingServiceImpl extends ServiceImpl<ThingMapper, Thing> implements
             }
         }
     }
-    /**
-     * 计算两点之间的距离（公里）
-     */
-    private double calculateDistance(double lat1, double lng1, double lat2, double lng2) {
-        final int EARTH_RADIUS = 6371; // 地球半径，单位公里
-        double latDistance = Math.toRadians(lat2 - lat1);
-        double lngDistance = Math.toRadians(lng2 - lng1);
-        double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2)
-                + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
-                * Math.sin(lngDistance / 2) * Math.sin(lngDistance / 2);
-        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        return EARTH_RADIUS * c;
-    }
+
 }
