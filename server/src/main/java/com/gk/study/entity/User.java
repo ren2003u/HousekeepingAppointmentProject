@@ -44,6 +44,7 @@ public class User implements Serializable {
     @TableField
     public String avatar;
     @TableField(exist = false)
+    @JsonIgnore
     public MultipartFile avatarFile;
     @TableField
     public String token;

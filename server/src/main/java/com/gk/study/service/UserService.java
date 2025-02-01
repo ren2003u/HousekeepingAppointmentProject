@@ -2,9 +2,9 @@ package com.gk.study.service;
 
 
 import com.gk.study.entity.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
 public interface UserService {
     List<User> getUserList(String keyword);
     User getAdminUser(User user);
