@@ -1,4 +1,4 @@
-package com.gk.study.controller;
+package com.gk.study.abandoned;
 
 import com.gk.study.common.APIResponse;
 import com.gk.study.common.ResponeCode;

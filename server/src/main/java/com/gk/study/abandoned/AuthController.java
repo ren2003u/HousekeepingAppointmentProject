@@ -1,14 +1,12 @@
-package com.gk.study.controller;
+package com.gk.study.abandoned;
 
 import com.gk.study.common.APIResponse;
 import com.gk.study.common.ResponeCode;
 import com.gk.study.entity.LoginRequest;
 import com.gk.study.entity.PhoneLoginRequest;
-import com.gk.study.entity.RegisterRequest;
 import com.gk.study.entity.WeChatLoginRequest;
 import com.gk.study.jwt.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -20,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
