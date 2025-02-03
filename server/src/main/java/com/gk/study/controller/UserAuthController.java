@@ -7,6 +7,7 @@ import com.gk.study.jwt.JwtUtil;
 import com.gk.study.permission.Access;
 import com.gk.study.permission.AccessLevel;
 import com.gk.study.service.UserService;
+import com.gk.study.userenum.UserRole;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -122,7 +123,7 @@ public class UserAuthController {
         newUser.setUsername(request.getUsername());
         newUser.setPassword(bcryptPwd);
         // 这里设定普通用户角色
-        newUser.setRole(User.NormalUser);
+        newUser.setRole(UserRole.NORMAL_USER.getCode());
         newUser.setStatus("0");
         newUser.setCreateTime(String.valueOf(System.currentTimeMillis()));
         newUser.setMobile(request.getPhone());

@@ -48,8 +48,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/api/auth/**").permitAll()  // 登录/注册接口无需鉴权
                 .antMatchers("/api/user/**").permitAll()
+                .antMatchers("/api/userAuth/**").permitAll()
                 .antMatchers("/user/**").permitAll()
                 .antMatchers("/auth/**").permitAll()
+                .antMatchers("/userAuth/**").permitAll()
                 .antMatchers("/api/thing/list").permitAll()
                 // ... 其他放行接口
                 .anyRequest().authenticated();

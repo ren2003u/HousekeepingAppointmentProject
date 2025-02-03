@@ -14,9 +14,11 @@ import java.util.Map;
 import java.util.function.Function;
 
 @Service
-public class ServiceProviderServiceImpl extends ServiceImpl<ServiceProviderMapper, ServiceProvider> implements ServiceProviderService {
+public class ServiceProviderServiceImpl extends ServiceImpl<ServiceProviderMapper, ServiceProvider>
+        implements ServiceProviderService {
+
     @Autowired
-    ServiceProviderMapper serviceProviderMapper;
+    private ServiceProviderMapper serviceProviderMapper;
 
     @Override
     public ServiceProvider getServiceProviderByUserId(Long userId) {
@@ -37,49 +39,5 @@ public class ServiceProviderServiceImpl extends ServiceImpl<ServiceProviderMappe
     public void deleteServiceProvider(Long id) {
         serviceProviderMapper.deleteById(id);
     }
-
-    @Override
-    public boolean saveBatch(Collection<ServiceProvider> entityList, int batchSize) {
-        return false;
-    }
-
-    @Override
-    public boolean saveOrUpdateBatch(Collection<ServiceProvider> entityList, int batchSize) {
-        return false;
-    }
-
-    @Override
-    public boolean updateBatchById(Collection<ServiceProvider> entityList, int batchSize) {
-        return false;
-    }
-
-    @Override
-    public boolean saveOrUpdate(ServiceProvider entity) {
-        return false;
-    }
-
-    @Override
-    public ServiceProvider getOne(Wrapper<ServiceProvider> queryWrapper, boolean throwEx) {
-        return null;
-    }
-
-    @Override
-    public Map<String, Object> getMap(Wrapper<ServiceProvider> queryWrapper) {
-        return Map.of();
-    }
-
-    @Override
-    public <V> V getObj(Wrapper<ServiceProvider> queryWrapper, Function<? super Object, V> mapper) {
-        return null;
-    }
-
-    @Override
-    public ServiceProviderMapper getBaseMapper() {
-        return null;
-    }
-
-    @Override
-    public Class<ServiceProvider> getEntityClass() {
-        return null;
-    }
 }
+

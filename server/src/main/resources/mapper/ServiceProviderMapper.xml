@@ -23,10 +23,34 @@
     <!-- 示例：更新一个服务提供商 -->
     <update id="updateById" parameterType="com.gk.study.entity.ServiceProvider">
         UPDATE b_service_provider
-        SET user_id = #{userId}, name = #{name}, avatar = #{avatar}, description = #{description},
-        rating = #{rating}, status = #{status}, create_time = #{createTime}
-        WHERE id = #{id}
+        <set>
+            <!-- 如果传入了 userId，则更新，否则忽略 -->
+            <if test="et.userId != null">
+                user_id = #{et.userId},
+            </if>
+            <if test="et.name != null">
+                name = #{et.name},
+            </if>
+            <if test="et.avatar != null">
+                avatar = #{et.avatar},
+            </if>
+            <if test="et.description != null">
+                description = #{et.description},
+            </if>
+            <if test="et.rating != null">
+                rating = #{et.rating},
+            </if>
+            <if test="et.status != null">
+                status = #{et.status},
+            </if>
+            <if test="et.createTime != null">
+                create_time = #{et.createTime},
+            </if>
+        </set>
+        WHERE id = #{et.id}
     </update>
+
+
 
     <!-- 示例：删除服务提供商 -->
     <delete id="deleteById" parameterType="Long">

@@ -13,6 +13,7 @@ import com.gk.study.permission.Access;
 import com.gk.study.permission.AccessLevel;
 import com.gk.study.service.ServiceProviderService;
 import com.gk.study.service.UserService;
+import com.gk.study.userenum.UserRole;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,7 +46,7 @@ public class ServiceProviderController {
 
         // 1. 检查用户是否存在且是普通用户 (role=1)
         User user = userService.getUserDetail(request.getUserId().toString());
-        if (user == null || user.getRole() != 1) {
+        if (user == null || user.getRole() != UserRole.NORMAL_USER.getCode()) {
             return ResponseEntity.ok(
                     new APIResponse<>(ResponeCode.FAIL, "用户不存在或非普通用户")
             );
@@ -71,12 +72,12 @@ public class ServiceProviderController {
 
         serviceProviderService.createServiceProvider(provider);
 
-        // 4. 更新用户角色 (2 = 服务提供者)
-        user.setRole(2);
+        // 4. 更新用户角色 (1 = 服务提供者)
+        user.setRole(UserRole.SERVICE_PROVIDER.getCode());
         userService.updateUser(user);
 
         return ResponseEntity.ok(
-                new APIResponse<>(ResponeCode.SUCCESS, "服务提供者注册成功")
+                new APIResponse<>(ResponeCode.SUCCESS, "服务提供者注册成功",request.getName())
         );
     }
 
@@ -99,7 +100,7 @@ public class ServiceProviderController {
         provider.setName(request.getName());
         provider.setAvatar(request.getAvatar());
         provider.setDescription(request.getDescription());
-        // 其他可更新字段...
+
 
         serviceProviderService.updateServiceProvider(provider);
 
