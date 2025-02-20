@@ -9,7 +9,7 @@ public enum AccessLevel {
     ADMIN(3, "admin"), // 管理员
     PUBLIC(4,"public"),
     SERVICE_PROVIDER(5,"service_provider"), // 服务提供者
-    SUPER(4, "super"); // 超级管理员
+    SUPER(6, "super"); // 超级管理员
 
     int code;
     String msg;

@@ -100,6 +100,7 @@ public class UserAuthController {
      * [A] 普通注册逻辑
      */
     private APIResponse<?> handleNormalRegister(RegisterRequest request) {
+        logger.info("handleNormalRegister : {}", request);
         // 1. 校验必填项
         if (StringUtils.isEmpty(request.getUsername()) ||
                 StringUtils.isEmpty(request.getPassword()) ||

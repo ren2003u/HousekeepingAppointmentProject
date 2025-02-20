@@ -54,8 +54,6 @@ public class Thing implements Serializable {
     @TableField
     public Double Longitude;
 
-
-
     @TableField(exist = false)
     public List<Long> tags; // 标签
 

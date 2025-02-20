@@ -5,11 +5,14 @@ import com.gk.study.common.ResponeCode;
 import com.gk.study.entity.ServiceProvider;
 import com.gk.study.entity.Thing;
 import com.gk.study.entity.ThingCollect;
+import com.gk.study.entity.User;
 import com.gk.study.permission.Access;
 import com.gk.study.permission.AccessLevel;
 import com.gk.study.service.ServiceProviderService;
 import com.gk.study.service.ThingCollectService;
 import com.gk.study.service.ThingService;
+import com.gk.study.service.UserService;
+import com.gk.study.userenum.UserRole;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +43,9 @@ public class ThingController {
 
     @Autowired
     ThingCollectService thingCollectService;
+
+    @Autowired
+    UserService userService;
 
     @Value("${File.uploadPath}")
     private String uploadPath;
@@ -102,21 +108,111 @@ public class ThingController {
         );
     }
 
-    @Access(level = AccessLevel.ADMIN)
     @PostMapping("/create")
     @Transactional
     public ResponseEntity<APIResponse<?>> create(@ModelAttribute Thing thing) throws IOException {
         logger.info("Creating thing: {}", thing);
+
+        User currentUser = userService.getUserDetail(String.valueOf(thing.userId));
+        if (currentUser == null || currentUser.getRole() != UserRole.NORMAL_USER.getCode() || currentUser.getRole() != UserRole.ADMIN.getCode() ) {
+            // 如果当前用户不是服务提供者，返回权限不足的错误
+            return ResponseEntity.ok(
+                    new APIResponse<>(ResponeCode.FAIL, "权限不足，只有服务提供者才能发布家政服务")
+            );
+        }
+        // 1. 校验必填字段及格式
+        if (thing.getTitle() == null || thing.getTitle().trim().isEmpty() ||
+                !thing.getTitle().matches(".*[a-zA-Z\u4e00-\u9fa5]+.*")) {
+            return ResponseEntity.ok(
+                    new APIResponse<>(ResponeCode.FAIL, "标题不能为空且必须包含汉字或英文字符")
+            );
+        }
+
+        if (thing.getPrice() == null || thing.getPrice().compareTo(BigDecimal.ZERO) <= 0) {
+            return ResponseEntity.ok(
+                    new APIResponse<>(ResponeCode.FAIL, "价格必须为正数")
+            );
+        }
+
+        if (thing.getMobile() == null || thing.getMobile().trim().isEmpty() ||
+                !thing.getMobile().matches("^[0-9]+$")) {
+            return ResponseEntity.ok(
+                    new APIResponse<>(ResponeCode.FAIL, "手机号码不能为空且必须全部为数字")
+            );
+        }
+
+        if (thing.getAge() == null || thing.getAge().trim().isEmpty() ||
+                !thing.getAge().matches("^[1-9][0-9]*$")) {
+            return ResponseEntity.ok(
+                    new APIResponse<>(ResponeCode.FAIL, "年龄不能为空且必须为正整数")
+            );
+        }
+
+        if (thing.getSex() == null || !(thing.getSex().equals("男") || thing.getSex().equals("女"))) {
+            return ResponseEntity.ok(
+                    new APIResponse<>(ResponeCode.FAIL, "性别必须为'男'或'女'")
+            );
+        }
+
+        if (thing.getLocation() == null || thing.getLocation().trim().isEmpty()) {
+            return ResponseEntity.ok(
+                    new APIResponse<>(ResponeCode.FAIL, "服务地址(location)不能为空")
+            );
+        }
+
+        if (thing.getLatitude() == null || thing.getLatitude() <= 0) {
+            return ResponseEntity.ok(
+                    new APIResponse<>(ResponeCode.FAIL, "Latitude不能为空且必须为正数")
+            );
+        }
+
+        if (thing.getLongitude() == null || thing.getLongitude() <= 0) {
+            return ResponseEntity.ok(
+                    new APIResponse<>(ResponeCode.FAIL, "Longitude不能为空且必须为正数")
+            );
+        }
+
+        if (thing.getUserId() == null) {
+            return ResponseEntity.ok(
+                    new APIResponse<>(ResponeCode.FAIL, "发布服务的用户ID不能为空")
+            );
+        }
+        // 通过 userService 检查 userId 合法性（此处假设返回 null 则非法）
+        User publisher = userService.getUserDetail(thing.getUserId().toString());
+        if (publisher == null) {
+            return ResponseEntity.ok(
+                    new APIResponse<>(ResponeCode.FAIL, "发布服务的用户不存在")
+            );
+        }
+
+        // 2. 设置默认值
+        // status 默认为 "0" 表示新发布服务可用
+        if (thing.getStatus() == null || thing.getStatus().trim().isEmpty()) {
+            thing.setStatus("0");
+        }
+        // score 初始为 "0"
+        if (thing.getScore() == null || thing.getScore().trim().isEmpty()) {
+            thing.setScore("0");
+        }
+        // wishCount 废弃字段，统一设为 0
+        thing.setWishCount(0);
+        // collectCount 初始为 0
+        thing.setCollectCount(0);
+
+        // 3. 处理封面图片上传 (可选)
         String url = saveThing(thing);
         if (!StringUtils.isEmpty(url)) {
             thing.setCover(url);
         }
 
+        // 4. 调用 Service 创建家政服务
         thingService.createThing(thing);
+
         return ResponseEntity.ok(
                 new APIResponse<>(ResponeCode.SUCCESS, "创建成功")
         );
     }
+
 
     @Access(level = AccessLevel.ADMIN)
     @PostMapping("/delete")
