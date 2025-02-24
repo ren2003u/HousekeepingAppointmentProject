@@ -1,0 +1,423 @@
+2025-02-01 20:54:06.155 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 19592 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 20:54:06.165 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 20:54:07.716 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 20:54:07.717 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 20:54:07.718 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 20:54:07.829 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 20:54:07.901 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 20:54:08.594 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 20:54:08.954 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 20:54:08.956 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 20:54:08.993 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 20:54:09.011 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 20:54:09.013 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 20:54:10.256 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 20:54:10.267 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 20:54:10.269 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 20:58:50.256 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 3524 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 20:58:50.260 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 20:58:52.956 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 20:58:52.957 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 20:58:52.959 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 20:58:53.207 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 20:58:53.362 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 20:58:54.575 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 20:58:55.135 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 20:58:55.136 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 20:58:55.213 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 20:58:55.252 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 20:58:55.258 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 20:58:57.176 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 20:58:57.192 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 20:58:57.196 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:02:19.854 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 16944 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:02:19.858 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:02:21.375 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:02:21.376 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:02:21.377 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:02:21.493 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:02:21.572 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:02:22.171 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:02:22.456 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:02:22.456 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:02:22.490 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:02:22.502 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:02:22.505 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:02:23.519 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:02:23.526 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:02:23.529 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:07:26.193 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 18884 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:07:26.196 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:07:28.094 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:07:28.096 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:07:28.097 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:07:28.312 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:07:28.485 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:07:29.962 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:07:30.618 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:07:30.619 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:07:30.695 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:07:30.740 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:07:30.748 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:07:32.867 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:07:32.887 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:07:32.892 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:10:57.429 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 12068 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:10:57.433 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:10:58.976 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:10:58.977 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:10:58.978 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:10:59.078 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:10:59.146 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:10:59.684 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:11:00.047 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:11:00.047 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:11:00.083 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:11:00.099 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:11:00.102 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:11:01.437 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:11:01.498 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.599 seconds (JVM running for 4.947)
+2025-02-01 21:12:05.910 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:12:05.921 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:12:11.844 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 16472 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:12:11.847 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:12:13.557 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:12:13.557 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:12:13.557 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:12:13.654 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:12:13.733 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:12:14.544 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:12:14.933 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:12:14.934 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:12:14.985 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:12:15.004 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:12:15.007 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:12:16.394 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:12:16.403 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:12:16.408 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:12:36.075 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 14484 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:12:36.079 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:12:37.546 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:12:37.547 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:12:37.547 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:12:37.661 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:12:37.736 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:12:38.385 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:12:38.693 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:12:38.694 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:12:38.739 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:12:38.756 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:12:38.759 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:12:39.756 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:12:39.763 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:12:39.767 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:13:16.163 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 19488 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:13:16.166 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:13:17.568 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:13:17.569 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:13:17.569 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:13:17.674 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:13:17.741 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:13:18.311 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:13:18.623 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:13:18.624 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:13:18.666 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:13:18.683 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:13:18.686 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:13:19.998 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:13:20.052 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.404 seconds (JVM running for 4.753)
+2025-02-01 21:13:54.362 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:13:54.375 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:14:00.104 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 19696 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:14:00.107 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:14:01.547 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:14:01.549 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:14:01.549 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:14:01.651 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:14:01.714 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:14:02.308 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:14:02.680 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:14:02.681 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:14:02.724 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:14:02.744 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:14:02.747 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:14:04.267 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:14:04.332 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.729 seconds (JVM running for 5.103)
+2025-02-01 21:14:25.863 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:14:25.879 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:14:31.685 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 20052 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:14:31.689 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:14:33.119 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:14:33.120 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:14:33.120 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:14:33.214 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:14:33.281 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:14:33.812 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:14:34.089 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:14:34.090 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:14:34.117 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:14:34.132 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:14:34.134 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:14:35.506 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:14:35.567 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.395 seconds (JVM running for 4.743)
+2025-02-01 21:14:43.740 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:14:43.752 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:14:49.873 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 13980 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:14:49.876 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:14:51.279 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:14:51.280 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:14:51.280 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:14:51.390 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:14:51.469 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:14:52.060 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:14:52.412 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:14:52.413 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:14:52.450 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:14:52.468 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:14:52.473 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:14:53.525 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:14:53.534 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:14:53.537 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:15:17.607 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 19972 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:15:17.613 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:15:19.513 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:15:19.514 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:15:19.515 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:15:19.634 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:15:19.702 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:15:20.226 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:15:20.534 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:15:20.535 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:15:20.569 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:15:20.587 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:15:20.589 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:15:21.563 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:15:21.574 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:15:21.577 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:15:57.508 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 19824 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:15:57.511 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:15:58.959 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:15:58.960 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:15:58.960 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:15:59.071 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:15:59.154 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:15:59.757 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:16:00.076 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:16:00.077 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:16:00.112 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:16:00.131 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:16:00.134 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:16:01.079 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:16:01.090 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:16:01.094 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:18:44.856 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 692 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:18:44.859 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:18:46.336 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:18:46.337 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:18:46.337 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:18:46.450 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:18:46.523 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:18:47.132 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:18:47.475 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:18:47.476 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:18:47.522 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:18:47.541 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:18:47.543 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:18:48.545 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:18:48.554 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:18:48.556 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:19:02.077 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 19176 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:19:02.084 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:19:04.349 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:19:04.350 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:19:04.351 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:19:04.488 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:19:04.589 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:19:05.317 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:19:05.740 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:19:05.741 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:19:05.790 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:19:05.817 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:19:05.822 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:19:07.935 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:19:08.026 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 6.901 seconds (JVM running for 7.304)
+2025-02-01 21:19:46.350 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:19:46.361 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:19:52.322 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 14724 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:19:52.325 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:19:53.799 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:19:53.799 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:19:53.800 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:19:53.899 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:19:53.968 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:19:54.552 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:19:54.873 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:19:54.873 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:19:54.907 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:19:54.926 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:19:54.931 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:19:56.344 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:19:56.393 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.575 seconds (JVM running for 4.96)
+2025-02-01 21:25:21.791 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:25:21.809 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:25:27.815 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 6692 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:25:27.818 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:25:29.309 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:25:29.310 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:25:29.310 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:25:29.425 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:25:29.507 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:25:30.107 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:25:30.452 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:25:30.452 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:25:30.486 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:25:30.508 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:25:30.512 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:25:31.511 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:25:31.520 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:25:31.523 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:28:26.705 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 9016 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:28:26.709 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:28:28.092 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:28:28.092 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:28:28.093 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:28:28.195 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:28:28.264 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:28:28.804 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:28:29.140 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:28:29.140 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:28:29.178 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:28:29.200 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:28:29.203 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:28:30.341 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:28:30.354 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:28:30.357 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:32:41.342 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 11708 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:32:41.344 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:32:42.809 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:32:42.811 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:32:42.813 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:32:42.937 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:32:43.024 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:32:43.552 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:32:43.883 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:32:43.883 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:32:43.919 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:32:43.936 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:32:43.939 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:32:45.014 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:32:45.023 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:32:45.025 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:34:06.861 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 21272 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:34:06.864 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:34:08.310 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:34:08.310 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:34:08.311 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:34:08.426 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:34:08.498 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:34:09.142 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:34:09.486 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:34:09.487 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:34:09.521 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:34:09.535 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:34:09.537 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:34:10.484 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:34:10.496 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:34:10.499 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:36:22.945 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 21060 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:36:22.948 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:36:24.431 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:36:24.432 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:36:24.432 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:36:24.549 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:36:24.629 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:36:25.241 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:36:25.556 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:36:25.556 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:36:25.587 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:36:25.603 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:36:25.605 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:36:26.584 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:36:26.593 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:36:26.596 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:41:10.290 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 18200 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:41:10.293 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:41:11.672 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:41:11.673 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:41:11.673 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:41:11.765 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:41:11.832 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:41:12.368 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:41:12.640 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:41:12.641 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:41:12.671 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:41:12.685 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:41:12.688 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:41:13.669 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:41:13.678 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:41:13.680 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:42:14.932 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 19664 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:42:14.935 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:42:16.434 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:42:16.435 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:42:16.436 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:42:16.546 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:42:16.618 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:42:17.213 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:42:17.501 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:42:17.501 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:42:17.538 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:42:17.550 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:42:17.552 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:42:18.549 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:42:18.556 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:42:18.560 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Stopping service [Tomcat]
+2025-02-01 21:43:52.318 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 18640 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:43:52.321 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:43:53.830 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:43:53.831 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:43:53.832 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:43:53.951 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:43:54.020 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:43:54.689 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:43:55.019 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:43:55.019 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:43:55.055 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:43:55.069 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:43:55.073 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:43:56.260 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:43:56.310 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.507 seconds (JVM running for 4.863)
+2025-02-01 21:45:30.389 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:45:30.403 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:45:36.410 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 14200 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:45:36.415 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:45:37.858 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:45:37.859 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:45:37.859 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:45:37.955 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:45:38.024 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:45:38.525 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:45:38.815 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:45:38.815 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:45:38.847 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:45:38.863 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:45:38.865 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:45:40.027 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:45:40.076 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.171 seconds (JVM running for 4.541)
+2025-02-01 21:56:01.343 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-01 21:56:01.356 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-01 21:56:07.368 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 20984 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-01 21:56:07.370 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-01 21:56:08.835 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:56:08.836 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-01 21:56:08.836 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-01 21:56:08.954 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-01 21:56:09.029 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-01 21:56:09.633 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-01 21:56:09.959 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-01 21:56:09.959 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-01 21:56:09.994 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-01 21:56:10.014 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-01 21:56:10.017 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-01 21:56:11.209 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-01 21:56:11.259 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 4.401 seconds (JVM running for 4.751)

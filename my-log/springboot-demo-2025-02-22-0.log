@@ -1,0 +1,198 @@
+2025-02-22 16:06:33.466 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 25536 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-22 16:06:33.476 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-22 16:06:35.521 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-22 16:06:35.522 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-22 16:06:35.522 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-22 16:06:35.684 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-22 16:06:35.785 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-22 16:06:36.466 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-22 16:06:36.802 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-22 16:06:36.802 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-22 16:06:36.835 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-22 16:06:36.853 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-22 16:06:36.857 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-22 16:06:39.854 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-22 16:06:39.979 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 7.131 seconds (JVM running for 7.701)
+2025-02-22 16:11:21.970 [ http-nio-9100-exec-7 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-22 16:11:22.026 [ http-nio-9100-exec-7 ] - [ ERROR ] [ com.gk.study.handler.CustomExceptionHandler : 29 ] - error log======>Request method 'GET' not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:253)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:442)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:383)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:125)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:67)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1261)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1043)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:113)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:114)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.gk.study.jwt.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:54)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-02-22 16:21:32.973 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-22 16:21:32.981 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-22 16:21:38.229 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 27388 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-22 16:21:38.233 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-22 16:21:40.182 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-22 16:21:40.183 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-22 16:21:40.184 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-22 16:21:40.303 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-22 16:21:40.373 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-22 16:21:40.968 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-22 16:21:41.287 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-22 16:21:41.287 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-22 16:21:41.331 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-22 16:21:41.345 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-22 16:21:41.349 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-22 16:21:43.771 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-22 16:21:43.828 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 6.27 seconds (JVM running for 6.849)
+2025-02-22 16:23:16.521 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-22 22:09:58.812 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-22 22:09:58.868 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-22 22:10:04.109 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 33592 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-22 22:10:04.113 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-22 22:10:05.630 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-22 22:10:05.631 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-22 22:10:05.632 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-22 22:10:05.740 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-22 22:10:05.815 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-22 22:10:06.412 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-22 22:10:06.733 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-22 22:10:06.733 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-22 22:10:06.770 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-22 22:10:06.783 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-22 22:10:06.786 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-22 22:10:10.354 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-22 22:10:10.467 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 6.902 seconds (JVM running for 7.329)
+2025-02-22 22:17:46.911 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-22 22:22:23.973 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-22 22:22:23.985 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-22 22:22:29.140 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 28904 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-22 22:22:29.144 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-22 22:22:30.674 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-22 22:22:30.675 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-22 22:22:30.675 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-22 22:22:30.779 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-22 22:22:30.845 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-22 22:22:31.409 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-22 22:22:31.717 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-22 22:22:31.718 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-22 22:22:31.762 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-22 22:22:31.776 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-22 22:22:31.778 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-22 22:22:33.891 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-22 22:22:33.947 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 5.315 seconds (JVM running for 5.704)
+2025-02-22 22:22:37.527 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-22 22:29:33.364 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-22 22:29:33.376 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-22 22:29:35.492 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 32320 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-22 22:29:35.496 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-22 22:29:37.135 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-22 22:29:37.137 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-22 22:29:37.137 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-22 22:29:37.249 [ main ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-22 22:29:37.321 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-22 22:29:37.965 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-22 22:29:38.345 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-22 22:29:38.346 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-22 22:29:38.391 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-22 22:29:38.420 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-22 22:29:38.425 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-22 22:29:40.768 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-22 22:29:40.824 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 5.846 seconds (JVM running for 6.229)
+2025-02-22 22:29:47.579 [ http-nio-9100-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-22 22:31:52.379 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2063 ] - {dataSource-1} closing ...
+2025-02-22 22:31:52.392 [ SpringApplicationShutdownHook ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 2136 ] - {dataSource-1} closed
+2025-02-22 22:31:54.426 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 55 ] - Starting MySpringApplication using Java 17.0.8 on LAPTOP-CQBCU01J with PID 16148 (C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2\server\target\classes started by 86136 in C:\Users\86136\Desktop\java_jiazheng-master-0b5a3d0e9570b46f48db42d0590d264f822e2fa2)
+2025-02-22 22:31:54.431 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 659 ] - No active profile set, falling back to default profiles: default
+2025-02-22 22:31:55.916 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-9100"]
+2025-02-22 22:31:55.917 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2025-02-22 22:31:55.917 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2025-02-22 22:31:56.033 [ main ] - [ INFO  ] [ o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173 ] - Initializing Spring embedded WebApplicationContext
+2025-02-22 22:31:56.093 [ main ] - [ INFO  ] [ c.a.d.s.b.a.DruidDataSourceAutoConfigure : 56 ] - Init DruidDataSource
+2025-02-22 22:31:56.623 [ main ] - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 975 ] - {dataSource-1} inited
+2025-02-22 22:31:56.937 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.metadata.TableInfoHelper : 342 ] - Can not find table primary key in Class: "java.lang.Object".
+2025-02-22 22:31:56.938 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.DefaultSqlInjector : 56 ] - class java.lang.Object ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-02-22 22:31:56.968 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2025-02-22 22:31:56.989 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.deleteById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.DeleteById]
+2025-02-22 22:31:56.991 [ main ] - [ WARN  ] [ c.b.mybatisplus.core.injector.AbstractMethod : 414 ] - [com.gk.study.mapper.ServiceProviderMapper.updateById] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.UpdateById]
+2025-02-22 22:31:59.010 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-9100"]
+2025-02-22 22:31:59.060 [ main ] - [ INFO  ] [ com.gk.study.MySpringApplication : 61 ] - Started MySpringApplication in 5.135 seconds (JVM running for 5.51)
