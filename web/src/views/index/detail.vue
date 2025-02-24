@@ -193,7 +193,7 @@ import {wishApi} from '/@/api/thingWish'
 import {collectApi} from '/@/api/thingCollect'
 import {BASE_URL} from "/@/store/constants";
 import {useRoute, useRouter} from "vue-router/dist/vue-router";
-import {useUserStore} from "/@/store";
+import {useUserStore} from "../../store";
 import {getFormatTime} from "/@/utils";
 import {createApi} from "../../api/order";
 

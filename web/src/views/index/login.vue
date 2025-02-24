@@ -3,35 +3,56 @@
     <div class="login-page pc-style">
       <img :src="LogoIcon" alt="logo" class="logo-icon">
       <div class="login-tab">
-        <div class="tab-selected">
-          <span>邮箱登录</span>
-          <span class="tabline tabline-width"></span>
+        <div :class="{'tab-selected': activeTab === 'username'}" @click="setActiveTab('username')">
+          <span>用户名登录</span>
+        </div>
+        <div :class="{'tab-selected': activeTab === 'phone'}" @click="setActiveTab('phone')">
+          <span>手机号登录</span>
+        </div>
+        <div :class="{'tab-selected': activeTab === 'wechat'}" @click="setActiveTab('wechat')">
+          <span>微信登录</span>
         </div>
       </div>
-      <div class="mail-login" type="login">
+
+      <!-- 用户名密码登录 -->
+      <div v-if="activeTab === 'username'" class="login-form">
         <div class="common-input">
           <img :src="MailIcon" class="left-icon">
           <div class="input-view">
-            <input placeholder="请输入注册邮箱" v-model="pageData.loginForm.username" type="text" class="input">
-            <p class="err-view">
-            </p>
+            <input placeholder="请输入用户名" v-model="pageData.username" type="text" class="input">
           </div>
-          <!---->
         </div>
         <div class="common-input">
           <img :src="PwdIcon" class="left-icon">
           <div class="input-view">
-            <input placeholder="请输入密码" v-model="pageData.loginForm.password" type="password" class="input">
-            <p class="err-view">
-            </p>
+            <input placeholder="请输入密码" v-model="pageData.password" type="password" class="input">
           </div>
-<!--          <img src="@/assets/pwd-hidden.svg" class="right-icon">-->
-          <!---->
         </div>
-        <div class="next-btn-view">
-          <button class="next-btn btn-active" style="margin: 16px 0px;" @click="handleLogin">登录</button>
-        </div>
+        <button @click="handleLogin">登录</button>
       </div>
+
+      <!-- 手机号验证码登录 -->
+      <div v-if="activeTab === 'phone'" class="login-form">
+        <div class="common-input">
+          <img :src="PhoneIcon" class="left-icon">
+          <div class="input-view">
+            <input placeholder="请输入手机号" v-model="pageData.phone" type="text" class="input">
+          </div>
+        </div>
+        <div class="common-input">
+          <img :src="CodeIcon" class="left-icon">
+          <div class="input-view">
+            <input placeholder="请输入验证码" v-model="pageData.smsCode" type="text" class="input">
+          </div>
+        </div>
+        <button @click="handlePhoneLogin">验证码登录</button>
+      </div>
+
+      <!-- 微信登录 -->
+      <div v-if="activeTab === 'wechat'" class="login-form">
+        <button @click="handleWeChatLogin">微信登录</button>
+      </div>
+
       <div class="operation">
         <a @click="handleCreateUser" class="forget-pwd" style="text-align: left;">注册新帐号</a>
         <a class="forget-pwd" style="text-align: right;">忘记密码？</a>
@@ -41,48 +62,112 @@
 </template>
 
 <script setup lang="ts">
-import {useUserStore} from '/@/store';
-import {message} from "ant-design-vue";
+import { useUserStore } from '../../store/modules/user'; // 相对路径导入
+import { useRouter } from 'vue-router';
+import { message } from "ant-design-vue";
+import { ref, reactive } from 'vue';
+import axios from 'axios';
 import LogoIcon from '/@/assets/images/k-logo.png';
 import MailIcon from '/@/assets/images/mail-icon.svg';
 import PwdIcon from '/@/assets/images/pwd-icon.svg';
+import PhoneIcon from '/@/assets/images/phone-icon.svg';
+import CodeIcon from '/@/assets/images/code-icon.svg';
 
-
-const router = useRouter();
 const userStore = useUserStore();
+const router = useRouter();
 
 const pageData = reactive({
-  loginForm: {
-    username: '',
-    password: ''
-  }
-})
+  username: '',
+  password: '',
+  phone: '',
+  smsCode: ''
+});
 
-const handleLogin = ()=> {
-  userStore.login({
-    username: pageData.loginForm.username,
-    password: pageData.loginForm.password
-  }).then(res=> {
-    loginSuccess()
-    console.log('success==>', userStore.user_name)
-    console.log('success==>', userStore.user_id)
-    console.log('success==>', userStore.user_token)
-  }).catch(err => {
-    message.warn(err.msg || '登录失败')
-  })
+const activeTab = ref('username'); // 控制当前登录方式
+
+const setActiveTab = (tab: string) => {
+  activeTab.value = tab;
+}
+
+const handleLogin = async () => {
+  try {
+    const response = await axios.post('http://localhost:9100/api/userAuth/login', {
+      username: pageData.username,
+      password: pageData.password
+    });
+
+    if (response.data.code === 0) {
+      loginSuccess(response.data.data);
+    } else {
+      message.warn(response.data.message || '登录失败');
+    }
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      message.warn(error.message || '登录失败');
+    } else {
+      message.warn('登录失败');
+    }
+  }
+}
+
+const handlePhoneLogin = async () => {
+  try {
+    const response = await axios.post('http://localhost:9100/api/userAuth/loginByPhone', {
+      phone: pageData.phone,
+      smsCode: pageData.smsCode
+    });
+
+    if (response.data.code === 0) {
+      loginSuccess(response.data.data);
+    } else {
+      message.warn(response.data.message || '登录失败');
+    }
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      message.warn(error.message || '登录失败');
+    } else {
+      message.warn('登录失败');
+    }
+  }
+}
+
+const handleWeChatLogin = async () => {
+  try {
+    const response = await axios.post('http://localhost:9100/api/userAuth/loginByWeChat', {
+      code: 'your-wechat-code' // 这里假设你已经获取了微信的 `code`
+    });
+
+    if (response.data.code === 0) {
+      loginSuccess(response.data.data);
+    } else {
+      message.warn(response.data.message || '登录失败');
+    }
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      message.warn(error.message || '登录失败');
+    } else {
+      message.warn('登录失败');
+    }
+  }
+}
+
+const loginSuccess = (data: any) => {
+  userStore.setUserData({
+    token: data.token,
+    username: data.username,
+    userId: data.userId
+  });
+
+  router.push({ name: 'portal' });
+  message.success('登录成功！');
 }
 
 const handleCreateUser = () => {
-  router.push({name:'register'})
+  router.push('/register');
 }
-
-const loginSuccess= ()=> {
-  router.push({ name: 'portal' })
-  message.success('登录成功！')
-}
-
-
 </script>
+
+
 <style scoped lang="less">
 div {
   display: block;
@@ -270,5 +355,4 @@ button, input, select, textarea {
   font-size: 14px;
   cursor: pointer;
 }
-
 </style>

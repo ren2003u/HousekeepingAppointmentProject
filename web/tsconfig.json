@@ -9,7 +9,7 @@
     "allowSyntheticDefaultImports": true,
     "strictFunctionTypes": false,
     "jsx": "preserve",
-    "baseUrl": ".",
+    "baseUrl": "./src",  // 确保 baseUrl 设置为 src
     "allowJs": true,
     "sourceMap": true,
     "esModuleInterop": true,
@@ -23,7 +23,7 @@
     "types": ["vite/client"],
     "removeComments": true,
     "paths": {
-      "/@/*": ["src/*"],
+      "@/*": ["*"],  // 修改为相对路径，直接指向 src 目录
       "/#/*": ["types/*"]
     }
   },

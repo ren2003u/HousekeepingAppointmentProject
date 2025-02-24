@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-
     <div class="tel-regist-page pc-style">
       <div class="regist-title">
         <span>注册新账号</span>
@@ -11,9 +10,8 @@
         <div class="common-input">
           <img :src="MailIcon" class="left-icon">
           <div class="input-view">
-            <input placeholder="请输入邮箱" v-model="tData.loginForm.username" type="text" class="input">
-            <p class="err-view">
-            </p>
+            <input placeholder="请输入用户名" v-model="tData.loginForm.username" type="text" class="input">
+            <p class="err-view"></p>
           </div>
         </div>
       </div>
@@ -22,8 +20,7 @@
           <img :src="PwdIcon" class="left-icon">
           <div class="input-view">
             <input placeholder="请输入密码" v-model="tData.loginForm.password" type="password" class="input">
-            <p class="err-view">
-            </p>
+            <p class="err-view"></p>
           </div>
         </div>
       </div>
@@ -32,8 +29,7 @@
           <img :src="PwdIcon" class="left-icon">
           <div class="input-view">
             <input placeholder="请再次输入密码" v-model="tData.loginForm.repassword" type="password" class="input">
-            <p class="err-view">
-            </p>
+            <p class="err-view"></p>
           </div>
         </div>
       </div>
@@ -42,13 +38,19 @@
           <button class="next-btn" @click="handleRegister">注册</button>
         </div>
       </div>
+      <div class="wechat-register">
+        <!-- 微信注册按钮 (假设后端已经实现了该功能) -->
+        <button @click="handleWeChatRegister" class="wechat-btn">微信注册</button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import {userRegisterApi} from '/@/api/user'
-import {message} from "ant-design-vue";
+import { userRegisterApi, weChatRegisterApi } from '/@/api/user'  // 假设你有这个 API
+import { message } from "ant-design-vue";
+import { useRouter } from 'vue-router';
+import { ref, reactive } from 'vue';
 import MailIcon from '/@/assets/images/mail-icon.svg';
 import PwdIcon from '/@/assets/images/pwd-icon.svg';
 
@@ -63,24 +65,40 @@ const tData = reactive({
 })
 
 const handleRegister = () => {
-  console.log('login')
+  // 校验表单数据
   if(tData.loginForm.username === ''
     || tData.loginForm.password === ''
-    || tData.loginForm.repassword === ''){
-    message.warn('不能为空！')
+    || tData.loginForm.repassword === '') {
+    message.warn('用户名、密码和确认密码不能为空！');
     return;
   }
 
+  if (tData.loginForm.password !== tData.loginForm.repassword) {
+    message.warn('两次输入的密码不一致！');
+    return;
+  }
+
+  // 调用后端 API 进行注册
   userRegisterApi({
     username: tData.loginForm.username,
     password: tData.loginForm.password,
     rePassword: tData.loginForm.repassword
   }).then(res => {
-    message.success('注册成功！')
-    router.push({name: 'login'})
+    message.success('注册成功！');
+    router.push({name: 'login'});
   }).catch(err => {
-    message.error(err.msg || '注册失败')
+    message.error(err.msg || '注册失败');
   })
+}
+
+const handleWeChatRegister = () => {
+  // 假设微信注册已经实现
+  weChatRegisterApi({ wechatCode: 'dummy_code' }).then(res => {
+    message.success('微信注册成功！');
+    router.push({name: 'login'});
+  }).catch(err => {
+    message.error(err.msg || '微信注册失败');
+  });
 }
 
 

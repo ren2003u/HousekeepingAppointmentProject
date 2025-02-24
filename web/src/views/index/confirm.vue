@@ -138,7 +138,7 @@ import Footer from '/@/views/index/components/footer.vue'
 import DeleteIcon from '/@/assets/images/delete-icon.svg'
 import {createApi} from '/@/api/order'
 import {listApi as listAddressListApi, createApi as createAddressApi} from '/@/api/address'
-import {useUserStore} from "/@/store";
+import {useUserStore} from "../../store";
 
 const router = useRouter();
 const route = useRoute();
