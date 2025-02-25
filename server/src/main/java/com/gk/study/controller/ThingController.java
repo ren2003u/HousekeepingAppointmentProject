@@ -13,6 +13,9 @@ import com.gk.study.service.ThingCollectService;
 import com.gk.study.service.ThingService;
 import com.gk.study.service.UserService;
 import com.gk.study.userenum.UserRole;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,18 +56,26 @@ public class ThingController {
     /**
      * 更新后的 list 方法，支持多种筛选条件
      */
+    @Operation(
+            summary = "获取家政服务列表",
+            description = "支持多种筛选条件，如关键词、排序方式、分类ID、标签、地理位置等。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "查询成功"),
+                    @ApiResponse(responseCode = "400", description = "查询参数不合法")
+            }
+    )
     @GetMapping("/list")
     public ResponseEntity<APIResponse<?>> list(
-            @RequestParam(required = false) String keyword,
-            @RequestParam(required = false) String sort, // 如: recent, hot, recommend
-            @RequestParam(required = false) Long classificationId,
-            @RequestParam(required = false) Long tag,
-            @RequestParam(required = false) Double latitude,  // 用户纬度
-            @RequestParam(required = false) Double longitude, // 用户经度
-            @RequestParam(required = false, defaultValue = "10") Double distanceKm, // 过滤距离，默认10公里
-            @RequestParam(required = false) BigDecimal minPrice,
-            @RequestParam(required = false) BigDecimal maxPrice,
-            @RequestParam(required = false) Integer minScore
+            @Parameter(description = "搜索关键词") @RequestParam(required = false) String keyword,
+            @Parameter(description = "排序方式，如: recent, hot, recommend") @RequestParam(required = false) String sort,
+            @Parameter(description = "分类ID") @RequestParam(required = false) Long classificationId,
+            @Parameter(description = "标签") @RequestParam(required = false) Long tag,
+            @Parameter(description = "用户的纬度") @RequestParam(required = false) Double latitude,
+            @Parameter(description = "用户的经度") @RequestParam(required = false) Double longitude,
+            @Parameter(description = "过滤的最大距离，默认10公里") @RequestParam(required = false, defaultValue = "10") Double distanceKm,
+            @Parameter(description = "最低价格") @RequestParam(required = false) BigDecimal minPrice,
+            @Parameter(description = "最高价格") @RequestParam(required = false) BigDecimal maxPrice,
+            @Parameter(description = "最低评分") @RequestParam(required = false) Integer minScore
     ) {
         logger.info("Listing things with filters - keyword: {}, sort: {}, classificationId: {}, tag: {}, latitude: {}, longitude: {}, distanceKm: {}, minPrice: {}, maxPrice: {}, minScore: {}",
                 keyword, sort, classificationId, tag, latitude, longitude, distanceKm, minPrice, maxPrice, minScore);
@@ -85,8 +96,16 @@ public class ThingController {
         );
     }
 
+    @Operation(
+            summary = "获取家政服务详情",
+            description = "根据家政服务ID获取家政服务的详细信息。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "查询成功"),
+                    @ApiResponse(responseCode = "404", description = "家政服务不存在")
+            }
+    )
     @GetMapping("/detail")
-    public ResponseEntity<APIResponse<?>> detail(@RequestParam Long id) {
+    public ResponseEntity<APIResponse<?>> detail( @Parameter(description = "家政服务ID", required = true) @RequestParam Long id) {
         logger.info("Fetching detail for thing ID: {}", id);
         Thing thing = thingService.getThingById(id.toString());
 
@@ -107,10 +126,17 @@ public class ThingController {
                 new APIResponse<>(ResponeCode.SUCCESS, "查询成功", result)
         );
     }
-
+    @Operation(
+            summary = "创建家政服务",
+            description = "创建家政服务接口，提供服务信息，如标题、价格、联系方式等，服务发布后可供用户选择",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "创建成功"),
+                    @ApiResponse(responseCode = "400", description = "参数不合法")
+            }
+    )
     @PostMapping("/create")
     @Transactional
-    public ResponseEntity<APIResponse<?>> create(@ModelAttribute Thing thing) throws IOException {
+    public ResponseEntity<APIResponse<?>> create(@Parameter(description = "要创建的家政服务信息", required = true) @ModelAttribute Thing thing) throws IOException {
         logger.info("Creating thing: {}", thing);
 
         User currentUser = userService.getUserDetail(String.valueOf(thing.userId));
@@ -213,10 +239,17 @@ public class ThingController {
         );
     }
 
-
+    @Operation(
+            summary = "删除家政服务",
+            description = "删除指定ID的家政服务，只有管理员有权限执行此操作。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "删除成功"),
+                    @ApiResponse(responseCode = "403", description = "权限不足")
+            }
+    )
     @Access(level = AccessLevel.ADMIN)
     @PostMapping("/delete")
-    public ResponseEntity<APIResponse<?>> delete(@RequestParam String ids) {
+    public ResponseEntity<APIResponse<?>> delete( @Parameter(description = "家政服务ID列表，多个ID用逗号分隔", required = true) @RequestParam String ids) {
         logger.info("Deleting things with IDs: {}", ids);
         // 批量删除
         String[] arr = ids.split(",");
@@ -227,11 +260,18 @@ public class ThingController {
                 new APIResponse<>(ResponeCode.SUCCESS, "删除成功")
         );
     }
-
+    @Operation(
+            summary = "更新家政服务",
+            description = "更新家政服务信息，包括封面图片等内容。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "更新成功"),
+                    @ApiResponse(responseCode = "400", description = "参数不合法")
+            }
+    )
     @Access(level = AccessLevel.ADMIN)
     @PostMapping("/update")
     @Transactional
-    public ResponseEntity<APIResponse<?>> update(@ModelAttribute Thing thing) throws IOException {
+    public ResponseEntity<APIResponse<?>> update(@Parameter(description = "更新的家政服务信息", required = true) @ModelAttribute Thing thing) throws IOException {
         logger.info("Updating thing: {}", thing);
         String url = saveThing(thing);
         if (!StringUtils.isEmpty(url)) {
@@ -271,10 +311,19 @@ public class ThingController {
     /**
      * 收藏家政服务
      */
+    @Operation(
+            summary = "收藏家政服务",
+            description = "用户收藏家政服务，已收藏过的不能重复收藏。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "收藏成功"),
+                    @ApiResponse(responseCode = "400", description = "参数不合法"),
+                    @ApiResponse(responseCode = "409", description = "已收藏过该服务")
+            }
+    )
     @Access(level = AccessLevel.LOGIN)
     @PostMapping("/collect")
     @Transactional
-    public ResponseEntity<APIResponse<?>> collect(@RequestBody ThingCollect thingCollect) throws IOException {
+    public ResponseEntity<APIResponse<?>> collect(@Parameter(description = "收藏的家政服务信息", required = true) @RequestBody ThingCollect thingCollect) throws IOException {
         // 判断是否已收藏
         if (thingCollectService.getThingCollect(thingCollect.getUserId(), thingCollect.getThingId()) != null) {
             return ResponseEntity.ok(
@@ -293,10 +342,18 @@ public class ThingController {
     /**
      * 取消收藏家政服务
      */
+    @Operation(
+            summary = "取消收藏家政服务",
+            description = "用户取消收藏已收藏的家政服务。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "取消收藏成功"),
+                    @ApiResponse(responseCode = "404", description = "未找到收藏记录")
+            }
+    )
     @Access(level = AccessLevel.LOGIN)
     @PostMapping("/unCollect")
     @Transactional
-    public ResponseEntity<APIResponse<?>> unCollect(@RequestParam Long id) throws IOException {
+    public ResponseEntity<APIResponse<?>> unCollect(@Parameter(description = "家政服务ID", required = true) @RequestParam Long id) throws IOException {
         thingCollectService.deleteThingCollect(String.valueOf(id));
         return ResponseEntity.ok(
                 new APIResponse<>(ResponeCode.SUCCESS, "取消收藏成功")
@@ -306,9 +363,17 @@ public class ThingController {
     /**
      * 获取用户收藏的家政服务列表
      */
+    @Operation(
+            summary = "获取用户收藏的家政服务列表",
+            description = "获取用户收藏的所有家政服务列表。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "查询成功"),
+                    @ApiResponse(responseCode = "404", description = "无收藏记录")
+            }
+    )
     @Access(level = AccessLevel.LOGIN)
     @GetMapping("/getUserCollectList")
-    public ResponseEntity<APIResponse<?>> getUserCollectList(@RequestParam Long userId) throws IOException {
+    public ResponseEntity<APIResponse<?>> getUserCollectList(@Parameter(description = "用户ID", required = true) @RequestParam Long userId) throws IOException {
         List<Map> collectList = thingCollectService.getThingCollectList(String.valueOf(userId));
 
         // 如果收藏列表为空
@@ -339,8 +404,16 @@ public class ThingController {
     /**
      * 获取用户发布的家政服务列表
      */
+    @Operation(
+            summary = "获取用户发布的家政服务列表",
+            description = "获取指定用户发布的所有家政服务列表。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "查询成功"),
+                    @ApiResponse(responseCode = "404", description = "该用户尚未发布任何服务")
+            }
+    )
     @GetMapping("/listUserThing")
-    public ResponseEntity<APIResponse<?>> listUserThing(@RequestParam Long userId) {
+    public ResponseEntity<APIResponse<?>> listUserThing(@Parameter(description = "用户ID", required = true) @RequestParam Long userId) {
         logger.info("Listing things for user ID: {}", userId);
         List<Thing> list = thingService.getUserThing(String.valueOf(userId));
 
