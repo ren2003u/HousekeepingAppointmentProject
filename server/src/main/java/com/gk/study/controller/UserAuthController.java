@@ -8,6 +8,9 @@ import com.gk.study.permission.Access;
 import com.gk.study.permission.AccessLevel;
 import com.gk.study.service.UserService;
 import com.gk.study.userenum.UserRole;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,16 +56,32 @@ public class UserAuthController {
     private String uploadPath;
 
     // ================== 用户列表、详情（后台/通用接口） ==================
+    @Operation(
+            summary = "获取用户列表",
+            description = "查询用户列表，可以根据关键词进行模糊搜索。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "查询成功"),
+                    @ApiResponse(responseCode = "400", description = "查询参数不合法")
+            }
+    )
     @GetMapping("/list")
-    public ResponseEntity<APIResponse<?>> list(@RequestParam(required=false) String keyword){
+    public ResponseEntity<APIResponse<?>> list( @Parameter(description = "查询的关键词，可选") @RequestParam(required=false) String keyword){
         List<User> list = userService.getUserList(keyword);
         return ResponseEntity.ok(
                 new APIResponse<>(ResponeCode.SUCCESS, "查询成功", list)
         );
     }
 
+    @Operation(
+            summary = "获取用户详情",
+            description = "根据用户ID查询用户详情。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "查询成功"),
+                    @ApiResponse(responseCode = "404", description = "用户不存在")
+            }
+    )
     @GetMapping("/detail")
-    public ResponseEntity<APIResponse<?>> detail(@RequestParam String userId){
+    public ResponseEntity<APIResponse<?>> detail(@Parameter(description = "用户ID", required = true)  @RequestParam String userId){
         User user = userService.getUserDetail(userId);
         if(user == null){
             return ResponseEntity.ok(
@@ -79,8 +98,16 @@ public class UserAuthController {
     /**
      * 普通用户注册 (结合了之前 userRegister + handleNormalRegister 的逻辑)
      */
+    @Operation(
+            summary = "用户注册",
+            description = "支持普通注册和微信注册。根据提供的微信代码或普通注册信息进行用户注册。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "注册成功"),
+                    @ApiResponse(responseCode = "400", description = "注册失败")
+            }
+    )
     @PostMapping("/register")
-    public ResponseEntity<APIResponse<?>> register(@RequestBody RegisterRequest request) {
+    public ResponseEntity<APIResponse<?>> register(@Parameter(description = "注册请求数据", required = true) @RequestBody RegisterRequest request) {
         try {
             // 如果有 wechatCode，就优先走微信注册，否则走普通注册
             if (!StringUtils.isEmpty(request.getWechatCode())) {
@@ -176,6 +203,14 @@ public class UserAuthController {
     /**
      * 用户名+密码登录
      */
+    @Operation(
+            summary = "用户名和密码登录",
+            description = "通过用户名和密码进行登录，成功后返回JWT令牌。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "登录成功"),
+                    @ApiResponse(responseCode = "401", description = "用户名或密码错误")
+            }
+    )
     @PostMapping("/login")
     public ResponseEntity<APIResponse<?>> login(@RequestBody LoginRequest request) {
         // 1. 构造用户名密码登录token
@@ -212,8 +247,16 @@ public class UserAuthController {
     /**
      * 手机号验证码登录
      */
+    @Operation(
+            summary = "手机号验证码登录",
+            description = "通过手机号和验证码登录，成功后返回JWT令牌。(暂时未完成)",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "登录成功"),
+                    @ApiResponse(responseCode = "400", description = "验证码错误")
+            }
+    )
     @PostMapping("/loginByPhone")
-    public ResponseEntity<APIResponse<?>> loginByPhone(@RequestBody PhoneLoginRequest request) {
+    public ResponseEntity<APIResponse<?>> loginByPhone(@Parameter(description = "手机号登录请求数据", required = true) @RequestBody PhoneLoginRequest request) {
         boolean pass = checkSmsCode(request.getPhone(), request.getSmsCode());
         if (!pass) {
             return ResponseEntity.ok(
@@ -237,8 +280,16 @@ public class UserAuthController {
     /**
      * 微信登录
      */
+    @Operation(
+            summary = "微信登录",
+            description = "通过微信登录，提供微信code获取openId，若用户不存在则自动注册。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "登录成功"),
+                    @ApiResponse(responseCode = "400", description = "微信登录失败")
+            }
+    )
     @PostMapping("/loginByWeChat")
-    public ResponseEntity<APIResponse<?>> loginByWeChat(@RequestBody WeChatLoginRequest request) {
+    public ResponseEntity<APIResponse<?>> loginByWeChat(@Parameter(description = "微信登录请求数据", required = true)  @RequestBody WeChatLoginRequest request) {
         String openId;
         try {
             openId = getWeChatOpenId(request.getCode());
@@ -279,7 +330,15 @@ public class UserAuthController {
     @Access(level = AccessLevel.ADMIN)
     @PostMapping("/create")
     @Transactional
-    public ResponseEntity<APIResponse<?>> create(@RequestBody User user) throws IOException {
+    @Operation(
+            summary = "管理员创建用户",
+            description = "管理员通过接口创建用户，创建过程中会进行用户名校验。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "创建成功"),
+                    @ApiResponse(responseCode = "400", description = "创建失败")
+            }
+    )
+    public ResponseEntity<APIResponse<?>> create(@Parameter(description = "用户信息", required = true) @RequestBody User user) throws IOException {
         // 管理员创建用户
         if (StringUtils.isEmpty(user.getUsername()) || StringUtils.isEmpty(user.getPassword())) {
             return ResponseEntity.ok(
@@ -307,8 +366,16 @@ public class UserAuthController {
     }
 
     @Access(level = AccessLevel.ADMIN)
+    @Operation(
+            summary = "删除用户",
+            description = "管理员删除指定用户。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "删除成功"),
+                    @ApiResponse(responseCode = "404", description = "用户不存在")
+            }
+    )
     @PostMapping("/delete")
-    public ResponseEntity<APIResponse<?>> delete(@RequestParam String ids){
+    public ResponseEntity<APIResponse<?>> delete(@Parameter(description = "用户ID列表", required = true) @RequestParam String ids){
         String[] arr = ids.split(",");
         for (String id : arr) {
             userService.deleteUser(id);
@@ -319,9 +386,17 @@ public class UserAuthController {
     }
 
     @Access(level = AccessLevel.ADMIN)
+    @Operation(
+            summary = "更新用户信息",
+            description = "管理员更新用户信息，密码不允许直接修改。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "更新成功"),
+                    @ApiResponse(responseCode = "400", description = "更新失败")
+            }
+    )
     @PostMapping("/update")
     @Transactional
-    public ResponseEntity<APIResponse<?>> update(@RequestBody User user) throws IOException {
+    public ResponseEntity<APIResponse<?>> update(@Parameter(description = "用户信息", required = true) @RequestBody User user) throws IOException {
         // 不允许直接改密码
         user.setPassword(null);
         // 处理头像
@@ -333,9 +408,17 @@ public class UserAuthController {
     }
 
     @Access(level = AccessLevel.LOGIN)
+    @Operation(
+            summary = "更新用户信息",
+            description = "普通用户更新自己的个人信息，不能修改用户名和密码。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "更新成功"),
+                    @ApiResponse(responseCode = "400", description = "更新失败")
+            }
+    )
     @PostMapping("/updateUserInfo")
     @Transactional
-    public ResponseEntity<APIResponse<?>> updateUserInfo(@RequestBody User user) throws IOException {
+    public ResponseEntity<APIResponse<?>> updateUserInfo(@Parameter(description = "用户信息", required = true) @RequestBody User user) throws IOException {
         User tmpUser = userService.getUserDetail(String.valueOf(user.getId()));
         if(tmpUser == null){
             return ResponseEntity.ok(
@@ -360,11 +443,19 @@ public class UserAuthController {
     }
 
     @Access(level = AccessLevel.LOGIN)
+    @Operation(
+            summary = "更新用户密码",
+            description = "普通用户修改自己的密码，要求提供原密码和新密码。",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "更新成功"),
+                    @ApiResponse(responseCode = "400", description = "密码修改失败")
+            }
+    )
     @PostMapping("/updatePwd")
     @Transactional
-    public ResponseEntity<APIResponse<?>> updatePwd(@RequestParam String userId,
-                                                    @RequestParam String password,
-                                                    @RequestParam String newPassword) throws IOException {
+    public ResponseEntity<APIResponse<?>> updatePwd(@Parameter(description = "用户ID", required = true) @RequestParam String userId,
+                                                    @Parameter(description = "原密码", required = true) @RequestParam String password,
+                                                    @Parameter(description = "新密码", required = true) @RequestParam String newPassword) throws IOException {
         User user = userService.getUserDetail(userId);
         if(user == null){
             return ResponseEntity.ok(
